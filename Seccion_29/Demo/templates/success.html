@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success - Data Collector App</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../static/main.css" />
+  </head>
+  <body>
+    <div
+      class="container-fluid min-vh-100 d-flex align-items-center justify-content-center"
+    >
+      <div class="row justify-content-center w-100">
+        <div class="col-lg-6 col-md-8 col-sm-10">
+          <!-- Success Card -->
+          <div class="card shadow-lg border-0 success-card">
+            <div class="card-body text-center p-5">
+              <!-- Success Icon with Animation -->
+              <div class="success-icon-wrapper mb-4">
+                <i
+                  class="bi bi-check-circle-fill text-success success-icon"
+                ></i>
+              </div>
+
+              <!-- Success Message -->
+              <h1 class="text-success fw-bold mb-3 fade-in">Thank You!</h1>
+              <p class="lead text-muted mb-4 fade-in-delay">
+                Your data has been submitted successfully
+              </p>
+
+              <!-- Info Alert -->
+              <div
+                class="alert alert-info border-0 fade-in-delay-2"
+                role="alert"
+              >
+                <i class="bi bi-envelope-check-fill me-2"></i>
+                You will receive an email with the survey results shortly.
+              </div>
+
+              <!-- Additional Info -->
+              <div class="mt-4 pt-4 border-top fade-in-delay-3">
+                <p class="text-muted small mb-3">
+                  <i class="bi bi-shield-check me-2"></i>
+                  Your information has been securely stored
+                </p>
+                <a href="{{ url_for('index') }}" class="btn btn-primary">
+                  <i class="bi bi-arrow-left-circle me-2"></i>Submit Another
+                  Response
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

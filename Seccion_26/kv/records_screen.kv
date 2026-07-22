@@ -1,0 +1,70 @@
+#:kivy 2.1.0
+#:import dp kivy.metrics.dp
+
+<RecordsScreen>:
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: 0.05, 0.05, 0.05, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        AnchorLayout:
+            size_hint: 1, 1
+            padding: ["16dp", "20dp", "16dp", "20dp"]
+            anchor_x: "center"
+            anchor_y: "center"
+
+            BoxLayout:
+                orientation: "vertical"
+                size_hint: None, None
+                width: min(root.width * 0.92, dp(560))
+                height: min(root.height * 0.92, dp(760))
+                padding: ["20dp", "20dp", "20dp", "20dp"]
+                spacing: "12dp"
+
+                canvas.before:
+                    Color:
+                        rgba: 0.08, 0.08, 0.08, 1
+                    RoundedRectangle:
+                        pos: self.pos
+                        size: self.size
+                        radius: [16, 16, 16, 16]
+
+                BoxLayout:
+                    size_hint_y: None
+                    height: "44dp"
+
+                    Label:
+                        text: "Menu de registros"
+                        color: 1, 1, 1, 1
+                        font_size: "24sp"
+                        bold: True
+                        halign: "left"
+                        text_size: self.width, None
+
+                    Button:
+                        id: back_home_button
+                        text: "Volver"
+                        size_hint_x: None
+                        width: "120dp"
+                        background_normal: ""
+                        background_color: 0.85, 0.85, 0.85, 1
+                        color: 0.08, 0.08, 0.08, 1
+                        bold: True
+
+                ScrollView:
+                    do_scroll_x: False
+                    bar_width: "4dp"
+
+                    Label:
+                        id: records_list_label
+                        text: ""
+                        color: 0.95, 0.95, 0.95, 1
+                        font_size: "14sp"
+                        size_hint_y: None
+                        text_size: self.width, None
+                        height: self.texture_size[1] + dp(16)
+                        valign: "top"
+                        halign: "left"

@@ -1,0 +1,51 @@
+VOLCANX020,NUMBER,NAME,LOCATION,STATUS,ELEV,TYPE,TIMEFRAME,LAT,LON
+1,1501,Mount Fuji,Japan,Active,3776,Stratovolcano,D1,35.3606,138.7274
+2,1502,Mount Etna,Italy,Active,3329,Stratovolcano,D1,37.7510,14.9934
+3,1503,Mount St. Helens,USA,Active,2549,Stratovolcano,D1,46.1912,-122.1944
+4,1504,Popocatépetl,Mexico,Active,5426,Stratovolcano,D1,19.0237,-98.6226
+5,1505,Mount Kilimanjaro,Tanzania,Dormant,5895,Stratovolcano,D3,-3.0674,37.3556
+6,1506,Eyjafjallajökull,Iceland,Active,1651,Stratovolcano,D1,63.6333,-19.6167
+7,1507,Mount Vesuvius,Italy,Active,1281,Stratovolcano,D1,40.8214,14.4265
+8,1508,Mount Merapi,Indonesia,Active,2930,Stratovolcano,D1,-7.5407,110.4461
+9,1509,Mount Elbrus,Russia,Dormant,5642,Stratovolcano,D3,43.3499,42.4453
+10,1510,Mount Pelee,Martinique,Active,1397,Stratovolcano,D1,14.8094,-61.1656
+11,1511,Mount Rainier,USA,Active,4392,Stratovolcano,D2,46.8523,-121.7603
+12,1512,Mount Tambora,Indonesia,Active,2850,Stratovolcano,D2,-8.2470,118.0000
+13,1513,Mount Erebus,Antarctica,Active,3794,Stratovolcano,D2,-77.5300,167.1600
+14,1514,Mount Agung,Indonesia,Active,3031,Stratovolcano,D1,-8.3421,115.5083
+15,1515,Mount Nyiragongo,DR Congo,Active,3470,Stratovolcano,D1,-1.5167,29.2500
+16,1516,Mount Taal,Philippines,Active,311,Complex volcano,D1,14.0026,120.9938
+17,1517,Mount Mayon,Philippines,Active,2463,Stratovolcano,D1,13.2575,123.6851
+18,1518,Mount Pinatubo,Philippines,Active,1486,Stratovolcano,D1,15.1425,120.3494
+19,1519,Mount Cotopaxi,Ecuador,Active,5897,Stratovolcano,D2,-0.6808,-78.4372
+20,1520,Mount Chimborazo,Ecuador,Dormant,6263,Stratovolcano,D3,-1.4692,-78.8170
+21,1521,Mount Parinacota,Chile/Bolivia,Dormant,6348,Stratovolcano,D3,-18.1700,-69.1500
+22,1522,Mount Osorno,Chile,Active,2652,Stratovolcano,D2,-40.9900,-72.4960
+23,1523,Mount Lanin,Argentina/Chile,Dormant,3776,Stratovolcano,D3,-39.6367,-71.4933
+24,1524,Mount Ngauruhoe,New Zealand,Active,2291,Stratovolcano,D2,-39.1581,175.6322
+25,1525,Mount Ruapehu,New Zealand,Active,2797,Stratovolcano,D2,-39.2814,175.5706
+26,1526,Mount Taranaki,New Zealand,Dormant,2518,Stratovolcano,D3,-39.2969,174.0633
+27,1527,Mount Teide,Spain,Active,3718,Stratovolcano,D2,28.2724,-16.6425
+28,1528,Mount Pico,Portugal,Active,2351,Stratovolcano,D2,38.4700,-28.4042
+29,1529,Mount Hekla,Iceland,Active,1491,Stratovolcano,D2,63.9911,-19.6770
+30,1530,Mount Askja,Iceland,Active,1516,Caldera,D2,65.0300,-16.7500
+31,1531,Mount Bardarbunga,Iceland,Active,2009,Stratovolcano,D2,64.6400,-17.5300
+32,1532,Mount Grimsvotn,Iceland,Active,1725,Subglacial volcano,D2,64.4167,-17.3167
+33,1533,Mount Kilauea,USA,Active,1247,Shield volcano,D1,19.4069,-155.2834
+34,1534,Mauna Loa,USA,Active,4169,Shield volcano,D1,19.4756,-155.6081
+35,1535,Mauna Kea,USA,Dormant,4207,Shield volcano,D3,19.8207,-155.4681
+36,1536,Mount Shasta,USA,Active,4322,Stratovolcano,D2,41.4092,-122.1946
+37,1537,Mount Hood,USA,Active,3426,Stratovolcano,D2,45.3735,-121.6959
+38,1538,Mount Redoubt,USA,Active,3108,Stratovolcano,D1,60.4850,-152.7425
+39,1539,Mount Augustine,USA,Active,1252,Stratovolcano,D1,59.3631,-153.4306
+40,1540,Mount Cleveland,USA,Active,1730,Stratovolcano,D1,52.8250,-169.9442
+41,1541,Mount Pavlof,USA,Active,2519,Stratovolcano,D1,55.4170,-161.8930
+42,1542,Mount Spurr,USA,Active,3374,Stratovolcano,D1,61.2990,-152.2510
+43,1543,Mount Okmok,USA,Active,1073,Caldera,D1,53.4200,-168.1300
+44,1544,Mount Akutan,USA,Active,1303,Stratovolcano,D1,54.1320,-165.9840
+45,1545,Mount Wrangell,USA,Active,4317,Shield volcano,D2,62.0050,-144.0190
+46,1546,Mount Iliamna,USA,Active,3053,Stratovolcano,D2,60.0320,-153.0900
+47,1547,Mount Sanford,USA,Dormant,4949,Shield volcano,D3,62.2120,-144.1300
+48,1548,Mount Edgecumbe,USA,Dormant,976,Stratovolcano,D3,57.0581,-135.7531
+49,1549,Mount Garibaldi,Canada,Active,2678,Stratovolcano,D2,49.8500,-123.0067
+50,1550,Mount Meager,Canada,Active,2680,Stratovolcano,D2,50.6333,-123.4833

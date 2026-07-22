@@ -1,0 +1,12 @@
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& "d:\Cursos\Python Mega Course\Seccion_30\env\Scripts\Activate.ps1") = Para ejecutar e inicializar el .env
+
+django-admin startproject mysite . = Crear la estructura base de un nuevo proyecto Django en el directorio actual
+
+python manage.py runserver = Para runear la web en localHost
+
+python manage.py migrate = Migra o pushea cualquier cambio que se haya hecho en los modelos de la aplicación a la base de datos. Esto crea un archivo de migración que describe los cambios realizados en los modelos.
+
+python manage.py startapp blog = la estructura de carpetas y archivos base para una nueva aplicación (módulo) llamada "blog". Esto incluye plantillas para definir las URLs, las vistas, las tablas de la base de datos (modelos) y la lógica de pruebas.
+
+python manage.py makemigrations = Migra cualquier cambio que se haya hecho en los modelos de la aplicación a la base de datos. Esto crea un archivo de migración que describe los cambios realizados en los modelos.
+

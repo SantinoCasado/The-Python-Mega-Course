@@ -1,0 +1,109 @@
+import os
+import time
+
+"""
+output:
+['DirEntry', 'F_OK', 'MutableMapping', 'O_APPEND', 'O_BINARY', 
+'O_CREAT', 'O_EXCL', 'O_NOINHERIT', 'O_RANDOM', 'O_RDONLY', 'O_RDWR', 
+'O_SEQUENTIAL', 'O_SHORT_LIVED', 'O_TEMPORARY', 'O_TEXT', 'O_TRUNC', 'O_WRONLY', 
+'P_DETACH', 'P_NOWAIT', 'P_NOWAITO', 'P_WAIT', 'R_OK', 'SEEK_CUR', 'SEEK_END', 
+'SEEK_SET', 'TMP_MAX', 'W_OK', 'X_OK', '_Environ', '__all__', '__builtins__', 
+'__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', 
+'__spec__', '_exit', '_get_exports_list', '_putenv', '_unsetenv', 'abspath', 
+'access', 'chdir', 'chmod', 'chown', 'close', 'closerange', 'cpu_count', 'curdir', 
+'defpath', 'device_encoding', 'dirfd', 'environ', 'error', 'execl', 'execle', 'execlp', 
+'execlpe', 'execv', 'execve', 'execvp', 'execvpe', 'extsep', 'fchdir', 'fchmod', 
+'fchown', 'fdopen', 'fork', 'forkpty', 'fspath', 'fstat', 'fsync', 'ftruncate', 
+'getcwd', 'getcwdb', 'getegid', 'geteuid', 'getgid', 'getgrouplist', 'getgroups', 
+'getloadavg', 'getlogin', 'getpgid', 'getpgrp', 'getpid', 'getppid', 'getsid', 'getuid', 'initgroups',  ...]
+
+The most relevant functions are:
+path -> This submodule contains functions for manipulating filesystem paths in a way that is appropriate for the operating system.
+abspath() -> Returns the absolute path of a file or directory.
+chdir() -> Changes the current working directory.
+chmod() -> Changes the permissions of a file or directory.
+chown() -> Changes the owner and group of a file or directory.
+listdir() -> Lists the files and directories in a specified directory.
+mkdir() -> Creates a new directory.
+remove() -> Deletes a file.
+rmdir() -> Deletes an empty directory.
+rename() -> Renames a file or directory.
+stat() -> Returns information about a file or directory.
+system() -> Executes a command in the system shell.
+walk() -> Generates the file names in a directory tree by walking the tree either top-down or bottom-up.
+"""
+
+# path submodule
+while True:
+    if os.path.exists("test_folder"):   # Verifica si la carpeta ya existe
+        print("The folder already exists.")
+        break
+    else:
+        os.mkdir("test_folder") # Crea una carpeta
+        print("Folder created.")
+        break
+
+print("Current Directory:", os.getcwd())  # Muestra el directorio actual
+os.chdir("test_folder")  # Cambia al directorio creado
+
+# ABS path
+abs_path = os.path.abspath("test_folder")   # Obtiene la ruta absoluta de la carpeta
+print("Absolute Path:", abs_path)
+
+# CHDIR
+os.chdir("..") # Cambia al directorio padre
+
+# chmod
+os.chmod("test_folder", 0o777)  # Cambia los permisos de la carpeta (lectura, escritura y ejecución para todos)
+
+"""
+Como funcionan los permisos en octal:
+4 -> read (r)
+2 -> write (w)
+1 -> execute (x)
+
+0o777 -> 
+    0: indica que es un número octal
+    o: owner (propietario)
+    7: permisos para el propietario (4+2+1 = rwx)
+    7: permisos para el grupo (4+2+1 = rwx)
+    7: permisos para otros (4+2+1 = rwx)
+"""
+
+# chown
+os.chown("test_folder", uid, gid)  # Cambia el propietario y grupo de la carpeta (requiere permisos de superusuario)
+# Nota: uid y gid deben ser números enteros que representan el ID del usuario y del grupo respectivamente.
+
+# listdir
+print("Contents of the current directory:", os.listdir("."))  # Lista los archivos y carpetas en el directorio actual
+
+# mkdir
+if not os.path.exists("another_folder"):
+    os.mkdir("another_folder")  # Crea otra carpeta si no existe
+
+# remove
+if os.path.exists("test_file.txt"):
+    os.remove("test_file.txt")  # Elimina un archivo si existe
+
+# rmdir
+if os.path.exists("another_folder"):
+    os.rmdir("another_folder")  # Elimina la carpeta si está vacía
+
+# rename
+if os.path.exists("test_folder"):
+    os.rename("test_folder", "renamed_folder")  # Renombra la carpeta
+
+# stat
+if os.path.exists("renamed_folder"):
+    stats = os.stat("renamed_folder")  # Obtiene información sobre la carpeta
+    print("Stats of renamed_folder:", stats)
+
+# system
+os.system("echo Hello, World!")  # Ejecuta un comando en la terminal
+
+# walk
+for dirpath, dirnames, filenames in os.walk("."):   # Recorre el árbol de directorios
+    print("Current Path:", dirpath) # Muestra la ruta actual
+    print("Directories:", dirnames) # Muestra las carpetas
+    print("Files:", filenames)      # Muestra los archivos
+    print("-" * 40)

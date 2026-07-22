@@ -1,0 +1,128 @@
+#:kivy 2.1.0
+#:import dp kivy.metrics.dp
+
+<LoginScreen>:
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: 0.05, 0.05, 0.05, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        ScrollView:
+            size_hint: 1, 1
+            do_scroll_x: False
+            bar_width: "4dp"
+
+            AnchorLayout:
+                size_hint_y: None
+                height: max(root.height, dp(560))
+                anchor_x: "center"
+                anchor_y: "center"
+                padding: ["16dp", "20dp", "16dp", "20dp"]
+
+                BoxLayout:
+                    orientation: "vertical"
+                    size_hint: None, None
+                    width: min(root.width * 0.88, dp(380))
+                    height: min(max(root.height * 0.82, dp(500)), dp(620))
+                    padding: ["24dp", "28dp", "24dp", "24dp"]
+                    spacing: "14dp"
+
+                    canvas.before:
+                        Color:
+                            rgba: 0.08, 0.08, 0.08, 1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [16, 16, 16, 16]
+
+                    Label:
+                        text: "User Login"
+                        font_size: "36sp"
+                        bold: True
+                        color: 1, 1, 1, 1
+                        size_hint_y: None
+                        height: "78dp"
+
+                    TextInput:
+                        id: username
+                        hint_text: "Username"
+                        multiline: False
+                        size_hint_y: None
+                        height: "52dp"
+                        padding: ["14dp", "14dp", "14dp", "12dp"]
+                        font_size: "16sp"
+                        background_normal: ""
+                        background_active: ""
+                        background_color: 0.12, 0.12, 0.12, 1
+                        foreground_color: 1, 1, 1, 1
+                        hint_text_color: 0.62, 0.62, 0.62, 1
+
+                    BoxLayout:
+                        size_hint_y: None
+                        height: "52dp"
+                        spacing: "8dp"
+
+                        TextInput:
+                            id: password
+                            hint_text: "Password"
+                            multiline: False
+                            password: not show_password.state == "down"
+                            padding: ["14dp", "14dp", "14dp", "12dp"]
+                            font_size: "16sp"
+                            background_normal: ""
+                            background_active: ""
+                            background_color: 0.12, 0.12, 0.12, 1
+                            foreground_color: 1, 1, 1, 1
+                            hint_text_color: 0.62, 0.62, 0.62, 1
+
+                        ToggleButton:
+                            id: show_password
+                            text: ""
+                            size_hint_x: None
+                            width: "44dp"
+                            background_normal: ""
+                            background_down: ""
+                            background_color: 0, 0, 0, 0
+                            border: 0, 0, 0, 0
+                            canvas.after:
+                                Color:
+                                    rgba: 1, 1, 1, 1
+                                Rectangle:
+                                    source: "img/show.png" if self.state == "down" else "img/hide.png"
+                                    size: dp(20), dp(20)
+                                    pos: self.center_x - dp(10), self.center_y - dp(10)
+
+                    Widget:
+                        size_hint_y: None
+                        height: "10dp"
+
+                    Button:
+                        id: login_button
+                        text: "Login"
+                        size_hint_y: None
+                        height: "52dp"
+                        font_size: "16sp"
+                        bold: True
+                        background_normal: ""
+                        background_color: 0.85, 0.85, 0.85, 1
+                        color: 0.08, 0.08, 0.08, 1
+
+                    GridLayout:
+                        cols: 1
+                        size_hint_y: None
+                        height: "42dp"
+                        spacing: "8dp"
+
+                        Button:
+                            id: go_signup_button
+                            text: "Sign up"
+                            background_normal: ""
+                            background_color: 0, 0, 0, 0
+                            color: 0.78, 0.78, 0.78, 1
+                            font_size: "13sp"
+
+                    Widget:
+                        size_hint_y: 1

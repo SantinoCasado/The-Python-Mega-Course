@@ -1,0 +1,33 @@
+- Parametros del boton:
+
+window = la ventana principal donde se ubicará el botón
+text = el texto que se mostrará en el botón
+pady = margen vertical alrededor del botón
+activate = función que se ejecutará cuando se haga clic en el botón
+background = color de fondo del botón
+cursor = tipo de cursor que se mostrará al pasar sobre el botón
+bitmap = imagen que se mostrará en el botón
+anchor = posición del contenido dentro del botón
+activeforeground = color del texto cuando el botón está activo
+activebackground = color de fondo cuando el botón está activo
+font = tipo y tamaño de la fuente del texto del botón
+highlightbackground = color del borde del botón
+highlightcolor = color del borde cuando el botón está enfocado
+highlightthickness = grosor del borde del botón
+padx = margen horizontal alrededor del botón
+pady = margen vertical alrededor del botón
+relief = estilo del borde del botón (por ejemplo, RAISED, SUNKEN, FLAT)
+repeatdelay = tiempo en milisegundos antes de que el botón comience a repetir la acción cuando se mantiene presionado
+image = imagen que se mostrará en el botón
+justify = justificación del texto dentro del botón (LEFT, CENTER, RIGHT)
+takefocus = si el botón puede recibir el foco de teclado
+textvariable = variable de texto asociada al botón
+underline = índice del carácter que se subrayará en el texto del botón
+wraplength = longitud máxima del texto antes de que se divida en varias líneas
+
+
+- Funciones mas importantes de la clase button:
+
+grid() = organiza el botón en una cuadrícula dentro de la ventana
+pack() = organiza el botón en bloques dentro de la ventana
+place() = posiciona el botón en coordenadas específicas dentro de la ventana

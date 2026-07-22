@@ -1,0 +1,200 @@
+#:kivy 2.1.0
+#:import dp kivy.metrics.dp
+
+<HomeScreen>:
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: 0.05, 0.05, 0.05, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: 1, 1
+            padding: ["16dp", "12dp", "16dp", "16dp"]
+            spacing: "10dp"
+
+            BoxLayout:
+                size_hint_y: None
+                height: dp(40)
+                spacing: "8dp"
+
+                Widget:
+
+                Button:
+                    id: go_records_button
+                    text: "Registros"
+                    size_hint_x: None
+                    width: "120dp"
+                    background_normal: ""
+                    background_color: 0.18, 0.18, 0.18, 1
+                    color: 1, 1, 1, 1
+                    bold: True
+
+                Button:
+                    id: logout_button
+                    text: "Log out"
+                    size_hint_x: None
+                    width: "92dp"
+                    background_normal: ""
+                    background_color: 0.18, 0.18, 0.18, 1
+                    color: 1, 1, 1, 1
+                    bold: True
+
+            ScrollView:
+                size_hint: 1, 1
+                do_scroll_x: False
+                bar_width: "4dp"
+
+                AnchorLayout:
+                    size_hint_y: None
+                    height: max(root.height, form_card.height + dp(20))
+                    anchor_x: "center"
+                    anchor_y: "top"
+                    padding: ["0dp", "0dp", "0dp", "0dp"]
+
+                    BoxLayout:
+                        id: form_card
+                        orientation: "vertical"
+                        size_hint: None, None
+                        width: min(root.width * 0.9, dp(440))
+                        height: self.minimum_height
+                        padding: ["24dp", "24dp", "24dp", "24dp"]
+                        spacing: "12dp"
+
+                        canvas.before:
+                            Color:
+                                rgba: 0.08, 0.08, 0.08, 1
+                            RoundedRectangle:
+                                pos: self.pos
+                                size: self.size
+                                radius: [16, 16, 16, 16]
+
+                        Label:
+                            text: "Registro diario de salud"
+                            font_size: "30sp"
+                            bold: True
+                            color: 1, 1, 1, 1
+                            size_hint_y: None
+                            height: "68dp"
+                            text_size: self.width, self.height
+                            halign: "center"
+                            valign: "middle"
+
+                        Label:
+                            id: date_label
+                            text: "Fecha:"
+                            color: 0.82, 0.82, 0.82, 1
+                            font_size: "14sp"
+                            size_hint_y: None
+                            height: "24dp"
+                            halign: "left"
+                            text_size: self.width, None
+
+                        Label:
+                            text: "Peso (kg)"
+                            color: 1, 1, 1, 1
+                            size_hint_y: None
+                            height: "22dp"
+                            halign: "left"
+                            text_size: self.width, None
+
+                        TextInput:
+                            id: weight_input
+                            hint_text: "Ej: 72.5"
+                            multiline: False
+                            input_filter: "float"
+                            size_hint_y: None
+                            height: "48dp"
+                            padding: ["12dp", "12dp", "12dp", "10dp"]
+                            font_size: "16sp"
+                            background_normal: ""
+                            background_active: ""
+                            background_color: 0.12, 0.12, 0.12, 1
+                            foreground_color: 1, 1, 1, 1
+                            hint_text_color: 0.62, 0.62, 0.62, 1
+
+                        Label:
+                            text: "Estado general"
+                            color: 1, 1, 1, 1
+                            size_hint_y: None
+                            height: "22dp"
+                            halign: "left"
+                            text_size: self.width, None
+
+                        Spinner:
+                            id: mood_spinner
+                            text: "Selecciona"
+                            values: ("Excelente", "Bien", "Regular", "Mal")
+                            size_hint_y: None
+                            height: "48dp"
+                            background_normal: ""
+                            background_color: 0.12, 0.12, 0.12, 1
+                            color: 1, 1, 1, 1
+
+                        Label:
+                            text: "Comidas"
+                            color: 1, 1, 1, 1
+                            size_hint_y: None
+                            height: "22dp"
+                            halign: "left"
+                            text_size: self.width, None
+
+                        TextInput:
+                            id: meals_input
+                            hint_text: "Desayuno, almuerzo, cena..."
+                            multiline: True
+                            size_hint_y: None
+                            height: "120dp"
+                            padding: ["12dp", "12dp", "12dp", "12dp"]
+                            font_size: "15sp"
+                            background_normal: ""
+                            background_active: ""
+                            background_color: 0.12, 0.12, 0.12, 1
+                            foreground_color: 1, 1, 1, 1
+                            hint_text_color: 0.62, 0.62, 0.62, 1
+
+                        Label:
+                            text: "Notas"
+                            color: 1, 1, 1, 1
+                            size_hint_y: None
+                            height: "22dp"
+                            halign: "left"
+                            text_size: self.width, None
+
+                        TextInput:
+                            id: notes_input
+                            hint_text: "Síntomas, energía, ejercicio, etc."
+                            multiline: True
+                            size_hint_y: None
+                            height: "120dp"
+                            padding: ["12dp", "12dp", "12dp", "12dp"]
+                            font_size: "15sp"
+                            background_normal: ""
+                            background_active: ""
+                            background_color: 0.12, 0.12, 0.12, 1
+                            foreground_color: 1, 1, 1, 1
+                            hint_text_color: 0.62, 0.62, 0.62, 1
+
+                        Label:
+                            id: status_label
+                            text: ""
+                            size_hint_y: None
+                            height: "22dp"
+                            color: 0.95, 0.95, 0.95, 1
+                            font_size: "13sp"
+                            halign: "left"
+                            text_size: self.width, None
+
+                        Button:
+                            id: save_health_button
+                            text: "Guardar registro diario"
+                            size_hint_y: None
+                            height: "50dp"
+                            font_size: "16sp"
+                            bold: True
+                            background_normal: ""
+                            background_color: 0.85, 0.85, 0.85, 1
+                            color: 0.08, 0.08, 0.08, 1

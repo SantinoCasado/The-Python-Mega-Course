@@ -1,0 +1,11 @@
+Jupyter:
+
+Inicializar Jupyter: jupyter notebook
+
+atajos:
+- enter: salto de linea
+- ctrl + enter = ejecuta
+- alt + enter después de ejecutar = nueva celda de código
+- shift + enter = ejecuta mas nueva celda de código
+- esc + d + d = elimina la celda de código mas antigua
+- click en el fondo de la celda (lo selecciona) + enter = modificar contenido de la celda de código
